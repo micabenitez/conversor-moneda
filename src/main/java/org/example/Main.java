@@ -42,7 +42,7 @@ public class Main {
             Conversion conv = service.getConvertedValue(monedaBase, monedaTarget, valorAConvertir);
 
             System.out.println("-------------------------------------------------");
-            response(valorAConvertir, conv.base_code(), conv.conversion_result(), conv.target_code());
+            System.out.println(String.format("%d %s equivale a %2f %s", valorAConvertir, conv.base_code(), conv.conversion_result(), conv.target_code()));
             System.out.println("-------------------------------------------------\n");
         }
     }
@@ -59,9 +59,5 @@ public class Main {
         System.out.println("\t6. Euro a Dólar");
         System.out.println("\t7. Salir");
         System.out.println("-------------------------------------------");
-    }
-
-    private static void response(int valor, String moneda1, double conversion, String moneda2) {
-        System.out.println(String.format("%d %s equivale a %2f %s", valor, moneda1, conversion, moneda2));
     }
 }
